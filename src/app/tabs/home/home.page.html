@@ -5,7 +5,7 @@
       <ion-title mode="ios">
         <img [src]="'assets/imgs/logo.png'" />
       </ion-title>
-    
+
       <ion-buttons slot="start">
         <ion-thumbnail>
           <ion-icon name="apps-outline"></ion-icon>
@@ -20,4 +20,54 @@
 
     </ion-toolbar>
   </ion-header>
+
+  <ion-row class="tagline">
+    <ion-col>
+      <ion-label>
+        <ion-text>Find Your</ion-text>
+        <p>
+          <ion-text color="dark">
+            Creative Job
+          </ion-text>
+        </p>
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="srch">
+    <ion-col size="10">
+      <ion-searchbar class="srchBar" mode="ios" placeholder="Search For Jobs"></ion-searchbar>
+    </ion-col>
+    <ion-col size="2">
+      <ion-button mode="ios">
+        <ion-icon name="options"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  @if (popular.length > 0) {
+  <ion-list lines="none">
+
+    <ion-list-header>
+      <ion-label>
+        Popular Jobs
+      </ion-label>
+      <ion-button fill="clear" size="small" color="medium">
+        <ion-text>
+          Show all
+        </ion-text>
+      </ion-button>
+    </ion-list-header>
+
+    <div>
+      <swiper-container [modules]="swiperModules" [slidesPerView]="1.4" [keyboard]="true" [centerSlides]="true">
+        @for (job of popular; track job.id) {
+        <swiper-slide>
+          <app-job [job]="job" [routerLink]="['/', 'tabs', 'job', job.id]"></app-job>
+        </swiper-slide>
+        }
+      </swiper-container>
+    </div>
+
+  </ion-list>
+  }
 </ion-content>
