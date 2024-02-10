@@ -20,6 +20,7 @@ import { addIcons } from 'ionicons';
 import { appsOutline, options } from 'ionicons/icons';
 import { IonicSlides } from '@ionic/angular';
 import { JobComponent } from 'src/app/components/job/job.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -44,8 +45,9 @@ import { JobComponent } from 'src/app/components/job/job.component';
     IonButtons,
     IonThumbnail,
     JobComponent,
+    RouterModule,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomePage implements OnInit {
   swiperModules = [IonicSlides];
