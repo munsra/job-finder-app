@@ -128,6 +128,28 @@ export class HomePage implements OnInit {
         logo_dark: 'linkedin_dark.png',
         logo_light: 'linkedin_light.png',
       },
+      {
+        id: 4,
+        company: 'TikTok',
+        location: 'New Delhi',
+        expires_on: '30/11/23',
+        post: 'Senior UX Designer',
+        type: 'Full Time',
+        salary: '$40-90k/year',
+        logo_dark: 'tiktok_dark.png',
+        logo_light: 'tiktok_light.png',
+      },
+      {
+        id: 4,
+        company: 'TikTok',
+        location: 'New Delhi',
+        expires_on: '30/11/23',
+        post: 'Senior UX Designer',
+        type: 'Full Time',
+        salary: '$40-90k/year',
+        logo_dark: 'tiktok_dark.png',
+        logo_light: 'tiktok_light.png',
+      },
     ];
   }
 }
